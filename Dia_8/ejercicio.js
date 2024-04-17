@@ -59,21 +59,28 @@ console.log(ageCan)
 
 // 2.- Necesitamos conocer la cantidad de canes que ya estan vacunados
 
-let countVacunne = 0
 
-canes.forEach((cane) => {
-    if(cane.vacunado) {
-        countVacunne++
+const dogVacunne = (dogsArray) => {
+  let countVacunne = 0
+
+  dogsArray.forEach((cane) => {
+    if (cane.vacunado) {
+      countVacunne++
     }
-})
+  })
 
-console.log(`Cantidad de canes vacunados: ${countVacunne}`)
+  return countVacunne
+}
+
+const perrosVacunados = dogVacunne(canes);
+console.log("Número de perros vacunados:", perrosVacunados);
 
 // 3.- Necesitamos una lista que contenga el nombre y la dirección completa de cada perro, en el siguiente formato:
         // "{nombre}: {calle} #{numero}, {colonia}, {codigoPostal}"
     
         const addressCan = canes.map(cane => `${cane.nombre}: ${cane.direccion.calle} #${cane.direccion.numero}, ${cane.direccion.colonia}, ${cane.direccion.codigoPostal}`)
-        
+        // const addressCan = canes.map(({ nombre, direccion: { calle, numero, colonia, codigoPostal } }) => `${nombre}: ${calle} #${numero}, ${colonia}, ${codigoPostal}`) con destructuracion del objeto
+
         console.log(addressCan)
 
 //  4.- Necesitamos saber la edad promedio en años humanos de los canes de la lista
