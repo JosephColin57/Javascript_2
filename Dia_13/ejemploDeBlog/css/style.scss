@@ -1,0 +1,17 @@
+.blog-card{
+    img{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.blog-card-avatar{
+    img{
+        height: 80px;
+        width: 15%;
+        object-fit: cover;
+        border-radius: 100px 100px;
+    }
+}
+

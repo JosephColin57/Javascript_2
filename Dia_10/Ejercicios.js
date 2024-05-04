@@ -45,3 +45,18 @@ console.log("La menor edad es:", menor)
 
     const result = restructuringData (data)
     console.log(result)
+
+// Traduccion
+
+/* En la función reestructurarData, se toma un parámetro array que representa los datos originales que se van a reestructurar. Se crea una variable llamada restructuredData para almacenar el resultado de la iteración sobre el array original utilizando el método map().
+
+Dentro del callback de map(), cada elemento del array se representa como persona. Para cada persona, se crea un objeto con tres propiedades:
+
+name: Se asigna el valor del primer elemento del array (persona[0]), que corresponde al nombre.
+lastname: Se asigna el valor del segundo elemento del array (persona[1]), que corresponde al apellido.
+age: Se asigna el valor del tercer elemento del array (persona[2]), que corresponde a la edad.
+Finalmente, la función retorna la variable restructuredData, que contiene la nueva estructura de datos, donde cada elemento es un objeto con las propiedades name, lastname y age, representando los datos reestructurados.
+
+Esta función proporciona una forma clara y eficiente de transformar el formato de los datos originales en un formato más adecuado para su uso posterior.
+
+ */
